@@ -1,0 +1,306 @@
+/* global =================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  font-size: 62.5%;
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+/* background-right =========================================== */
+.background-right img {
+  height: 100vh;
+  max-width: 72rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* background-left =========================================== */
+.background-left {
+  background-color: var(--background);
+  height: 100vh;
+  max-width: 76.5rem;
+  z-index: -1;
+}
+
+/* FORM =========================================== */
+.logo img {
+  padding: 4rem;
+}
+/* HEADER FORM =========================================== */
+.background-form {
+  margin: 9rem 9rem 0;
+  width: 57.2rem;
+  height: 51.2rem;
+  background-color: var(--form-background);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 33.4rem;
+}
+
+.header-form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding-top: 5.5rem;
+}
+
+.header-form h3 {
+  font: 600 2.4rem "Poppins", sans-serif;
+  color: var(--text-title);
+}
+
+p {
+  padding-bottom: 2.7rem;
+  padding-top: 0.5rem;
+  font: 500 1.6rem "Roboto", sans-serif;
+  color: var(--text-base);
+}
+
+/*  FORM-EMAIL =========================================== */
+label {
+  font: 500 1.6rem "Poppins", sans-serif;
+  color: var(--text-base);
+
+  margin-top: 2.7rem;
+}
+
+.email {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 33.4rem;
+  height: 4.4rem;
+  background-color: var(--form-background);
+  border-radius: 0.4rem;
+  border: 1px solid var(--text-base);
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.email:focus-within {
+  border: 1px solid var(--primary-color);
+  box-shadow: 1px 1px 4px var(--primary-color);
+}
+
+input[type="email"] {
+  width: 29.7rem;
+  height: 4rem;
+
+  background-color: var(--form-background);
+  border: none;
+  outline: none;
+
+  color: var(--text-base);
+  font: 400 1.4rem "Roboto", sans-serif;
+}
+
+input[type="email"]::placeholder {
+  color: var(--text-base);
+  font: 400 1.4rem "Roboto", sans-serif;
+}
+
+.email .mail {
+  padding-left: 0.5rem;
+}
+
+.mail-focus {
+  position: absolute;
+  left: 1rem;
+  display: none;
+  visibility: hidden;
+}
+
+/*  FORM-PASSWORD =========================================== */
+.password {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 33.4rem;
+  height: 4.4rem;
+  background-color: var(--form-background);
+  border-radius: 0.4rem;
+  border: 1px solid var(--text-base);
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.password:focus-within {
+  border: 1px solid var(--primary-color);
+  box-shadow: 1px 1px 4px var(--primary-color);
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+input[type="password"] {
+  width: 29.7rem;
+  height: 4rem;
+
+  background-color: var(--form-background);
+  border: none;
+  outline: none;
+
+  color: var(--text-base);
+  font: 400 1.4rem "Roboto", sans-serif;
+}
+
+input[type="text"] {
+  width: 29.7rem;
+  height: 4rem;
+
+  background-color: var(--form-background);
+  border: none;
+  outline: none;
+
+  color: var(--text-base);
+  font: 400 1.4rem "Roboto", sans-serif;
+}
+
+input[type="password"]::placeholder {
+  color: var(--text-base);
+  font: 400 1.4rem "Roboto", sans-serif;
+}
+
+.lock {
+  display: block;
+  padding-left: 1rem;
+}
+
+.lock-focus {
+  position: absolute;
+  left: 1rem;
+  display: none;
+  visibility: hidden;
+}
+
+.eye {
+  display: block;
+  padding-right: 1rem;
+}
+
+/*  FORM-CHECKBOX =========================================== */
+.content {
+    display: block;
+    position: relative;
+    width: 10.6rem;
+    cursor: pointer;
+    margin-right: 5rem;
+}
+
+.content input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    left: -2.5rem;
+    top: .3rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--form-background);
+    border: 1px solid var(--text-base);
+    border-radius: .4rem;
+    position: absolute;
+}
+
+.content input:checked ~ .checkmark {
+    background: var(--primary-color);
+}
+
+.content .checkmark::after {
+    top: .1rem;
+    left: .5rem;
+    width: .5rem;
+    height: 1rem;
+    border: solid var(--background);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.checkmark::after{
+    content: '';
+    display: none;
+    position: absolute;
+}
+
+.content input:checked ~ .checkmark::after {
+    display: block;
+   
+}
+
+.content p {
+    
+   display: flex;
+   align-items: center;
+    font: 400 1.6rem 'Roboto', sans-serif;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkbox p a{
+     color: var(--primary-color);
+}
+/* BUTTON =========================================== */
+button {
+  width: 33.4rem;
+  height: 4.4rem;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.4rem;
+  margin-bottom: 1.4rem;
+}
+
+button h3 {
+  color: var(--background);
+  font: 600 1.8rem "Poppins", sans-serif;
+}
+button:hover {
+  background-color: var(--background);
+}
+
+button h3:hover {
+  color: var(--primary-color);
+}
+
+/* FOOTER-FORM =========================================== */
+.footer-form p {
+  text-align: center;
+  font: 400 1.4rem "Poppins", sans-serif;
+  color: var(--primary-color);
+}
+
+.footer-form a {
+  font: 600 1.4rem "Poppins", sans-serif;
+  color: var(--primary-color);
+}

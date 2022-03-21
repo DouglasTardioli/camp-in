@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camp-in</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- BACKGROUND =========================================== -->
+      <div class="background-right">
+        <img src="assets/side-image-2x.jpg" alt="imagem carro" />
+      </div>
+      <!-- FORM ======================================================== -->
+      <div class="background-left">
+        <div class="logo">
+          <img src="assets/logo.svg" alt="logo" />
+        </div>
+        <!-- HEADER-FORM ======================================================== -->
+        <div class="background-form">
+          <div class="container">
+            <div class="header-form">
+              <img src="assets/log-in.svg" alt="simbolo login" />
+              <h3>Faça seu login</h3>
+            </div>
+            <p>Entre com suas informações de cadastro.</p>
+            <!-- FORM-EMAIL ======================================================== -->
+            <form>
+              <label for="email"> E-mail </label> <br />
+              <div class="email">
+                <div class="mail-focus">
+                  <img src="assets/mail-focus.svg" alt="ícone mail laranja" />
+                </div>
+                <div class="mail">
+                  <img class="mail" src="assets/mail.svg" alt="ícone mail" />
+                </div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Digite seu e-mail"
+                />
+              </div>
+              <!-- FORM-PASSWORD ======================================================== -->
+              <label for="password">Senha</label> <br />
+              <div class="password">
+                <div class="lock">
+                  <img src="assets/lock.svg" alt="ícone cadeado" />
+                </div>
+                <div class="lock-focus">
+                  <img src="assets/lock-focus.svg" alt="ícone cadeado foco" />
+                </div>
+                <input
+                  type="password" id="myInput"
+                  name="password" onclick="myFunctionTwo ()"
+                  placeholder="Digite sua senha"
+                  
+                />
+                <span onclick="myFunction()"> 
+                    <img class="eye" src="assets/eye.svg" alt="ícone olho"/>
+                    
+                </span>
+                
+              </div>
+              <!-- FORM-CHECKBOX ======================================================== -->
+              <div class="checkbox">
+                <label class="content container">
+                  <input type="checkbox"/>
+                  <span class="checkmark"></span>
+                  <p> Lembre-me</p>
+                  </label>
+                
+                <p>
+                  <a href="#">Esqueci minha senha</a>
+                </p>
+              </div>
+              <!-- FORM-BUTTON ======================================================== -->
+              <button>
+                <h3>ENTRAR</h3>
+              </button>
+              <!-- FORM-FOOTER ======================================================== -->
+              <div class="footer-form">
+                <p>Não tem uma conta? <a href="">Registre-se</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
