@@ -31,6 +31,7 @@ html {
   top: 0;
   right: 0;
   z-index: -1;
+  margin: 0 auto;
 }
 
 /* background-left =========================================== */
@@ -304,6 +305,8 @@ button:focus {
   color: var(--primary-color);
 }
 
+
+
 /* @MEDIA 1441px =========================================== */
 @media (min-width: 1441px) {
     .background-right img {
@@ -323,7 +326,7 @@ button:focus {
       }
     }
 /* @MEDIA MOBILE =========================================== */ 
-@media (max-width: 427px) {
+@media (max-width: 768px) {
     body, html{
         overflow: hidden;
     }
