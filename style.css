@@ -30,6 +30,7 @@ html {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: -1;
 }
 
 /* background-left =========================================== */
@@ -285,13 +286,11 @@ button h3 {
   color: var(--background);
   font: 600 1.8rem "Poppins", sans-serif;
 }
-button:hover {
-  background-color: var(--background);
+button:focus {
+  background-color: var(--text-base);
 }
 
-button h3:hover {
-  color: var(--primary-color);
-}
+
 
 /* FOOTER-FORM =========================================== */
 .footer-form p {
@@ -304,3 +303,48 @@ button h3:hover {
   font: 600 1.4rem "Poppins", sans-serif;
   color: var(--primary-color);
 }
+
+/* @MEDIA 1441px =========================================== */
+@media (min-width: 1441px) {
+    .background-right img {
+        display: none;
+      }
+      .background-left {
+        background-color: var(--background);
+        height: 100vh;
+        max-width: 100vw;
+        z-index: -1;
+      }
+    
+
+      .background-form {
+       margin: 0 auto;
+       margin-top: 10rem;
+      }
+    }
+/* @MEDIA MOBILE =========================================== */ 
+@media (max-width: 427px) {
+    body, html{
+        overflow: hidden;
+    }
+    
+    .background-right img {
+        display: none;
+      }
+      .background-left {
+        background-color: var(--background);
+        
+       
+      } 
+      .background-form {
+          background-color: var(--background);
+          height: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+      } 
+      .container {
+        margin: 0 auto;
+        
+      }
+    }
