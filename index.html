@@ -37,16 +37,21 @@
             <form>
               <label for="email"> E-mail </label> <br />
               <div class="email">
-                <div class="mail-focus">
+               
+                  <i id="mail-focus">
                   <img src="assets/mail-focus.svg" alt="ícone mail laranja" />
-                </div>
-                <div class="mail">
+                </i>
+             
+                <span class="mail">
+                  <i id="mail">
                   <img class="mail" src="assets/mail.svg" alt="ícone mail" />
-                </div>
+                </i>
+                </span>
                 <input
-                  type="email"
+                  type="text"
                   name="email"
                   placeholder="Digite seu e-mail"
+                  onclick="focusImgs()"
                 />
               </div>
               <!-- FORM-PASSWORD ======================================================== -->

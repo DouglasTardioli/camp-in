@@ -104,7 +104,9 @@ label {
 .email:focus-within {
   border: 1px solid var(--primary-color);
   box-shadow: 1px 1px 4px var(--primary-color);
+ 
 }
+
 
 input[type="email"] {
   width: 29.7rem;
@@ -123,14 +125,19 @@ input[type="email"]::placeholder {
   font: 400 1.4rem "Roboto", sans-serif;
 }
 
-.email .mail {
-  padding-left: 0.5rem;
+#mail {
+  position: relative;
+  padding-left: 0.9rem;
 }
 
-.mail-focus {
+#mail-focus {
   position: absolute;
   left: 1rem;
   display: none;
+  visibility: hidden;
+}
+
+input[type="text"]:focus ~ .mail{
   visibility: hidden;
 }
 
