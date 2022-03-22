@@ -136,6 +136,11 @@ input[type="email"]::placeholder {
   
 }
 
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px var(--text-base) inset;
+}
+
+
 .email:focus-within span:nth-child(1) {
   
   visibility: hidden;
@@ -326,12 +331,14 @@ button:focus {
 /* @MEDIA 1441px =========================================== */
 @media (min-width: 1441px) {
   .background-right img {
-    display: none;
+  
+    max-width: 40%;
+    height: 100%;
   }
   .background-left {
     background-color: var(--background);
     height: 100vh;
-    max-width: 100vw;
+    max-width: 70%;
     z-index: -1;
   }
 
@@ -364,3 +371,4 @@ button:focus {
     margin: 0 auto;
   }
 }
+
