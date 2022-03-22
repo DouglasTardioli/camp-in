@@ -26,7 +26,6 @@
         </div>
         <!-- HEADER-FORM ======================================================== -->
         <div class="background-form">
-           
           <div class="container">
             <div class="header-form">
               <img src="assets/log-in.svg" alt="simbolo login" />
@@ -37,52 +36,52 @@
             <form>
               <label for="email"> E-mail </label> <br />
               <div class="email">
-               
-                  <i id="mail-focus">
-                  <img src="assets/mail-focus.svg" alt="ícone mail laranja" />
-                </i>
-             
                 <span class="mail">
-                  <i id="mail">
-                  <img class="mail" src="assets/mail.svg" alt="ícone mail" />
-                </i>
+                  <i class="mail-focus">
+                    <img src="assets/mail-focus.svg" alt="ícone mail laranja" />
+                  </i>
+                  <i>
+                    <img class="mail" src="assets/mail.svg" alt="ícone mail" />
+                  </i>
                 </span>
+
                 <input
                   type="text"
                   name="email"
                   placeholder="Digite seu e-mail"
-                  onclick="focusImgs()"
+             
                 />
               </div>
               <!-- FORM-PASSWORD ======================================================== -->
               <label for="password">Senha</label> <br />
               <div class="password">
-                <div class="lock">
+                <span class="icons">
+                <i class="lock">
                   <img src="assets/lock.svg" alt="ícone cadeado" />
-                </div>
-                <div class="lock-focus">
+                </i>
+                <i class="lock-focus">
                   <img src="assets/lock-focus.svg" alt="ícone cadeado foco" />
-                </div>
+                </i>
+              </span>
                 <input
-                  type="password" id="myInput"
-                  name="password" onclick="myFunctionTwo ()"
+                  type="password"
+                  id="myInput"
+                  name="password"
+                  onclick="myFunctionTwo ()"
                   placeholder="Digite sua senha"
-                  
                 />
-                <span onclick="myFunction()"> 
-                    <img class="eye" src="assets/eye.svg" alt="ícone olho"/>
-                    
+                <span onclick="myFunction()">
+                  <img class="eye" src="assets/eye.svg" alt="ícone olho" />
                 </span>
-                
               </div>
               <!-- FORM-CHECKBOX ======================================================== -->
               <div class="checkbox">
                 <label class="content container">
-                  <input type="checkbox"/>
+                  <input type="checkbox" />
                   <span class="checkmark"></span>
-                  <p> Lembre-me</p>
-                  </label>
-                
+                  <p>Lembre-me</p>
+                </label>
+
                 <p>
                   <a href="#">Esqueci minha senha</a>
                 </p>

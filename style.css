@@ -104,9 +104,7 @@ label {
 .email:focus-within {
   border: 1px solid var(--primary-color);
   box-shadow: 1px 1px 4px var(--primary-color);
- 
 }
-
 
 input[type="email"] {
   width: 29.7rem;
@@ -125,20 +123,28 @@ input[type="email"]::placeholder {
   font: 400 1.4rem "Roboto", sans-serif;
 }
 
-#mail {
+.mail img {
   position: relative;
   padding-left: 0.9rem;
 }
 
-#mail-focus {
+.mail-focus {
   position: absolute;
-  left: 1rem;
+  left: 0;
   display: none;
+  visibility: hidden;
+  
+}
+
+.email:focus-within span:nth-child(1) {
+  
   visibility: hidden;
 }
 
-input[type="text"]:focus ~ .mail{
-  visibility: hidden;
+.email:focus-within span .mail-focus {
+  display: block;
+  visibility: visible;
+  
 }
 
 /*  FORM-PASSWORD =========================================== */
@@ -202,6 +208,7 @@ input[type="password"]::placeholder {
 
 .lock-focus {
   position: absolute;
+  top: 1rem;
   left: 1rem;
   display: none;
   visibility: hidden;
@@ -212,73 +219,79 @@ input[type="password"]::placeholder {
   padding-right: 1rem;
 }
 
-/*  FORM-CHECKBOX =========================================== */
-.content {
-    display: block;
-    position: relative;
-    width: 10.6rem;
-    cursor: pointer;
-    margin-right: 5rem;
+.password:focus-within span:nth-child(1) {
+  visibility: hidden;
 }
 
-.content input{
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
+.password:focus-within span .lock-focus {
+  display: block;
+  visibility: visible;
+}
+/*  FORM-CHECKBOX =========================================== */
+.content {
+  display: block;
+  position: relative;
+  width: 10.6rem;
+  cursor: pointer;
+  margin-right: 5rem;
+}
+
+.content input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .checkmark {
-    left: -2.5rem;
-    top: .3rem;
-    width: 2rem;
-    height: 2rem;
-    background-color: var(--form-background);
-    border: 1px solid var(--text-base);
-    border-radius: .4rem;
-    position: absolute;
+  left: -2.5rem;
+  top: 0.3rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--form-background);
+  border: 1px solid var(--text-base);
+  border-radius: 0.4rem;
+  position: absolute;
 }
 
 .content input:checked ~ .checkmark {
-    background: var(--primary-color);
+  background: var(--primary-color);
 }
 
 .content .checkmark::after {
-    top: .1rem;
-    left: .5rem;
-    width: .5rem;
-    height: 1rem;
-    border: solid var(--background);
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+  top: 0.1rem;
+  left: 0.5rem;
+  width: 0.5rem;
+  height: 1rem;
+  border: solid var(--background);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
-.checkmark::after{
-    content: '';
-    display: none;
-    position: absolute;
+.checkmark::after {
+  content: "";
+  display: none;
+  position: absolute;
 }
 
 .content input:checked ~ .checkmark::after {
-    display: block;
-   
+  display: block;
 }
 
 .content p {
-    
-   display: flex;
-   align-items: center;
-    font: 400 1.6rem 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  font: 400 1.6rem "Roboto", sans-serif;
 }
 
 .checkbox {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.checkbox p a{
-     color: var(--primary-color);
+.checkbox p a {
+  color: var(--primary-color);
 }
 /* BUTTON =========================================== */
 button {
@@ -298,8 +311,6 @@ button:focus {
   background-color: var(--text-base);
 }
 
-
-
 /* FOOTER-FORM =========================================== */
 .footer-form p {
   text-align: center;
@@ -312,49 +323,44 @@ button:focus {
   color: var(--primary-color);
 }
 
-
-
 /* @MEDIA 1441px =========================================== */
 @media (min-width: 1441px) {
-    .background-right img {
-        display: none;
-      }
-      .background-left {
-        background-color: var(--background);
-        height: 100vh;
-        max-width: 100vw;
-        z-index: -1;
-      }
-    
+  .background-right img {
+    display: none;
+  }
+  .background-left {
+    background-color: var(--background);
+    height: 100vh;
+    max-width: 100vw;
+    z-index: -1;
+  }
 
-      .background-form {
-       margin: 0 auto;
-       margin-top: 10rem;
-      }
-    }
-/* @MEDIA MOBILE =========================================== */ 
+  .background-form {
+    margin: 0 auto;
+    margin-top: 10rem;
+  }
+}
+/* @MEDIA MOBILE =========================================== */
 @media (max-width: 768px) {
-    body, html{
-        overflow: hidden;
-    }
-    
-    .background-right img {
-        display: none;
-      }
-      .background-left {
-        background-color: var(--background);
-        
-       
-      } 
-      .background-form {
-          background-color: var(--background);
-          height: 100%;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0;
-      } 
-      .container {
-        margin: 0 auto;
-        
-      }
-    }
+  body,
+  html {
+    overflow: hidden;
+  }
+
+  .background-right img {
+    display: none;
+  }
+  .background-left {
+    background-color: var(--background);
+  }
+  .background-form {
+    background-color: var(--background);
+    height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .container {
+    margin: 0 auto;
+  }
+}
